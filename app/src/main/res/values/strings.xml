@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">collegeDesigns</string>
+    <string name="section">الشعبة</string>
+    <string name="student">الطالب</string>
+    <string name="login">تسجيل دخول</string>
+    <string name="username">رقم الهاتف او اسم المستخدم</string>
+    <string name="card_no">رقم الهوية</string>
+    <string name="login_as_user">تسجيل كمسخدم</string>
+    <string name="resend">اعادة ارسال</string>
+    <string name="forgot_card_no">هل نسيت رقم الهوية ؟</string>
+</resources>

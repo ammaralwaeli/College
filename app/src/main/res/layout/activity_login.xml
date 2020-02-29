@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layoutDirection="rtl"
+        tools:context=".ui.LoginActivity">
+
+
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/university"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:paddingTop="5dp"
+            android:paddingStart="5dp"
+            android:paddingEnd="5dp"
+            android:elevation="10dp"
+            android:background="@drawable/bg_linear"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:fontFamily="@font/arialbd"
+                android:paddingEnd="120dp"
+                android:paddingStart="120dp"
+                android:text="@string/login"
+                android:textColor="@color/colorText"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:elevation="20dp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@drawable/bg_linear"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_text"
+                android:hint="@string/username"
+                android:drawablePadding="10dp"
+                android:padding="20dp"
+                android:elevation="3dp"
+                android:drawableStart="@drawable/ic_phone_receiver"
+                />
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_edit_text"
+                android:hint="@string/card_no"
+                android:drawablePadding="10dp"
+                android:padding="20dp"
+                android:elevation="3dp"
+                android:layout_marginTop="10dp"
+                android:drawableStart="@drawable/ic_lock"
+                />
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button"
+                android:text="@string/login_as_user"
+                android:paddingEnd="80dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/white"
+                android:paddingStart="80dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bahij_the_sans_arabic_plain"
+                    android:text="@string/forgot_card_no"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/sendId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:fontFamily="@font/bahij_the_sans_arabic_extra_bold"
+                    android:text="@string/resend"
+                    android:textColor="@color/colorText"
+                    android:textSize="16sp"
+
+
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</layout>
