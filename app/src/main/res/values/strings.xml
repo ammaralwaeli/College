@@ -8,4 +8,6 @@
     <string name="login_as_user">تسجيل كمسخدم</string>
     <string name="resend">اعادة ارسال</string>
     <string name="forgot_card_no">هل نسيت رقم الهوية ؟</string>
+    <string name="notifications">الاشعارات</string>
+    <string name="token_expire">انتهت صلاحية تسجيلك يرجى اعادة تسجيل الدخول</string>
 </resources>

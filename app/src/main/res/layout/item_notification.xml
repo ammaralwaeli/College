@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
+        <variable
+            name="notfiaction"
+            type="com.srit.collegedesigns.section.notification.NotificationModel" />
     </data>
 
     <LinearLayout
@@ -37,9 +40,10 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="العنوان"
+                android:text="@{notfiaction.notificationTitle}"
                 android:textColor="@color/colorText"
                 android:textSize="18sp"
+                tools:text="@string/notifications"
                 android:fontFamily="@font/bahij_the_sans_arabic_bold"
                 />
 
@@ -48,9 +52,10 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="النص"
+                android:text="@{notfiaction.notificationText}}"
                 android:textColor="@color/colorText"
                 android:textSize="14sp"
+                tools:text="@string/notifications"
                 android:fontFamily="@font/bahij_the_sans_arabic_plain"
                 />
         </LinearLayout>

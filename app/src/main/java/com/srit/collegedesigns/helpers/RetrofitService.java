@@ -22,6 +22,10 @@ public class RetrofitService {
     private static String BASE_URL="http://uni.account-school.com";
     private static Gson gson=new GsonBuilder().setLenient().create();
 
+    public static Gson getGson() {
+        return gson;
+    }
+
     public static String getBaseUrl(){
         return BASE_URL;
     }
@@ -50,7 +54,7 @@ public class RetrofitService {
                         public Response intercept(Chain chain) throws IOException {
                             String token =SharedPrefHelper.getInstance().getAccessToken();
                             Request newRequest = chain.request().newBuilder()
-                                    .addHeader("Authorization", "bearer "+token)
+                                    .addHeader("token", token)
                                     .build();
                             return chain.proceed(newRequest);
                         }
@@ -66,6 +70,10 @@ public class RetrofitService {
 
     public static <S> S cteateService(Class<S> serviceClass) {
         return retrofit.create(serviceClass);
+    }
+
+    public static <S> S cteateServiceWithAuth(Class<S> serviceClass) {
+        return retrofitWithAuth().create(serviceClass);
     }
 
 }

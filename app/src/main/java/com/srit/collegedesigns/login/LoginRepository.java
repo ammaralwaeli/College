@@ -1,7 +1,6 @@
 package com.srit.collegedesigns.login;
 
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.lifecycle.MutableLiveData;
 
@@ -41,6 +40,7 @@ public class LoginRepository {
                 if(response.isSuccessful()){
                     data.setValue(response.body());
                 }else {
+
                     Log.e("loginError",response.code()+"  "+response.message());
                 }
             }
