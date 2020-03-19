@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="item"
+            type="com.srit.collegedesigns.activities.section.schedules.ScheduleModel" />
+        <variable
+            name="counter"
+            type="String" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_schedule_item"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl"
+        android:elevation="5dp"
+        android:layout_margin="15dp"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_schedule_text"
+            android:paddingStart="25dp"
+            android:paddingTop="15dp"
+            android:paddingEnd="25dp"
+            android:paddingBottom="15dp"
+            android:text="@{counter}"
+            android:fontFamily="@font/bahij_the_sans_arabic_bold"
+            android:textColor="@android:color/white"
+            android:textSize="17sp"
+            tools:text="1" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Graphic Design"
+            android:text="@{item.lesson}"
+            android:textSize="17sp"
+            android:textAlignment="viewStart"
+            android:fontFamily="@font/bahij_the_sans_arabic_bold"
+            android:paddingStart="10dp"
+            android:textColor="@color/colorHeader"
+            />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="2:00"
+            android:text="@{item.hour}"
+            android:textSize="12sp"
+            android:fontFamily="@font/bahij_the_sans_arabic_extra_light"
+            android:textAlignment="viewEnd"
+            android:paddingEnd="25dp"
+            android:textColor="@color/colorHeader"
+            />
+    </LinearLayout>
+</layout>

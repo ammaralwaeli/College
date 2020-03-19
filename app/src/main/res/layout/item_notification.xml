@@ -5,7 +5,7 @@
     <data>
         <variable
             name="notfiaction"
-            type="com.srit.collegedesigns.section.notification.NotificationModel" />
+            type="com.srit.collegedesigns.activities.section.notification.NotificationModel" />
     </data>
 
     <LinearLayout
@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_bell"
             android:layout_marginTop="10dp"
-            />
+            android:contentDescription="@string/notifications" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -42,9 +42,9 @@
                 android:layout_height="wrap_content"
                 android:text="@{notfiaction.notificationTitle}"
                 android:textColor="@color/colorText"
-                android:textSize="18sp"
+                android:textSize="14sp"
                 tools:text="@string/notifications"
-                android:fontFamily="@font/bahij_the_sans_arabic_bold"
+                android:fontFamily="@font/bahij_the_sans_arabic_plain"
                 />
 
 
@@ -52,11 +52,11 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{notfiaction.notificationText}}"
+                android:text="@{notfiaction.notificationText}"
                 android:textColor="@color/colorText"
-                android:textSize="14sp"
+                android:textSize="12sp"
                 tools:text="@string/notifications"
-                android:fontFamily="@font/bahij_the_sans_arabic_plain"
+                android:fontFamily="@font/bahij_the_sans_arabic_extra_light"
                 />
         </LinearLayout>
     </LinearLayout>

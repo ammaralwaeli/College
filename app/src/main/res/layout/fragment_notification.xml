@@ -8,11 +8,12 @@
     </data>
 
     <LinearLayout
+        android:id="@+id/notification_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="rtl"
         android:orientation="vertical"
-        tools:context=".section.SectionActivity">
+        tools:context=".activities.section.SectionActivity">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -28,15 +29,16 @@
                 android:layout_marginRight="50dp"
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/pink_out_line"
-                android:checkedButton="@+id/offer"
+                android:checkedButton="@+id/section"
                 android:orientation="horizontal"
                 android:padding="3dp">
 
                 <RadioButton
-                    android:id="@+id/search"
+                    android:id="@+id/student"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
+                    android:fontFamily="@font/bahij_the_sans_arabic_plain"
                     android:layout_marginTop="1dp"
                     android:layout_marginBottom="1dp"
                     android:layout_weight="1"
@@ -45,22 +47,23 @@
                     android:gravity="center"
                     android:text="@string/student"
                     android:textColor="@android:color/black"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
 
                 <RadioButton
-                    android:id="@+id/offer"
+                    android:id="@+id/section"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="1dp"
-                    android:layout_marginRight="1dp"
+                    android:layout_marginEnd="1dp"
                     android:layout_marginBottom="1dp"
                     android:layout_weight="1"
+                    android:fontFamily="@font/bahij_the_sans_arabic_plain"
                     android:background="@drawable/toggle_widget_background"
                     android:button="@null"
                     android:gravity="center"
                     android:text="@string/section"
                     android:textColor="@android:color/black"
-                    android:textSize="20sp" />
+                    android:textSize="14sp" />
             </RadioGroup>
 
 

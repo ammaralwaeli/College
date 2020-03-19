@@ -8,6 +8,7 @@
     </data>
 
     <LinearLayout
+        android:id="@+id/home_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layoutDirection="rtl"
@@ -34,22 +35,20 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:layout_marginStart="20dp"
-                    android:fontFamily="@font/bahij_the_sans_arabic_extra_bold"
+                    android:fontFamily="@font/bahij_the_sans_arabic_bold"
                     android:text="مرحبا بك عمار احمد"
                     android:textColor="@color/colorText"
-                    android:textSize="19sp"
-                    android:layout_marginLeft="20dp" />
+                    android:textSize="21sp" />
 
                 <TextView
                     android:id="@+id/college_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:layout_marginLeft="20dp"
-                    android:fontFamily="@font/bahij_the_sans_arabic_extra_light"
+                    android:fontFamily="@font/bahij_the_sans_arabic_light"
                     android:text="كلية العلوم - قسم الحاسوب"
                     android:textColor="@color/colorText"
-                    android:textSize="15sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
@@ -77,11 +76,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:layout_marginLeft="20dp"
-                android:fontFamily="@font/arialbd"
-                android:text="الاقسام"
+                android:fontFamily="@font/bahij_the_sans_arabic_semi_bold"
+                android:text="@string/sectios"
                 android:textColor="@color/colorText"
-                android:textSize="25sp" />
+                android:textSize="18sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -100,46 +98,47 @@
                     android:background="@drawable/bg_dep"
                     android:elevation="5dp"
                     android:padding="10dp"
-                    android:src="@drawable/ic_bell" />
+                    android:src="@drawable/ic_bell"
+                    android:contentDescription="@string/app_logo" />
 
                 <ImageView
                     android:id="@+id/schedule"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_dep"
                     android:elevation="5dp"
                     android:padding="10dp"
-                    android:src="@drawable/ic_scedule" />
+                    android:src="@drawable/ic_scedule"
+                    android:contentDescription="@string/schedule" />
 
                 <ImageView
                     android:id="@+id/homework"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_dep"
                     android:elevation="5dp"
                     android:padding="10dp"
-                    android:src="@drawable/ic_homework1" />
+                    android:src="@drawable/ic_homework1"
+                    android:contentDescription="@string/teacher_homeworks" />
 
                 <ImageView
                     android:id="@+id/library"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="10dp"
-                    android:layout_marginRight="10dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
                     android:background="@drawable/bg_dep"
                     android:elevation="5dp"
                     android:padding="10dp"
-                    android:src="@drawable/ic_book" />
+                    android:src="@drawable/ic_book"
+                    android:contentDescription="@string/library" />
 
             </LinearLayout>
         </LinearLayout>
@@ -158,10 +157,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/arialbd"
-                    android:text="الاعلانات"
+                    android:fontFamily="@font/bahij_the_sans_arabic_semi_bold"
+                    android:text="@string/adverts"
                     android:textColor="@color/colorText"
-                    android:textSize="25sp" />
+                    android:textSize="18sp" />
 
                 <ProgressBar
                     android:id="@+id/progressIndicator"

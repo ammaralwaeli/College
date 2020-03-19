@@ -1,8 +1,10 @@
 package com.srit.collegedesigns.api;
 
 import com.google.gson.JsonObject;
-import com.srit.collegedesigns.home.advertisement.AdvertisemrntModel;
-import com.srit.collegedesigns.section.notification.NotificationModel;
+import com.srit.collegedesigns.activities.home.advertisement.AdvertisemrntModel;
+import com.srit.collegedesigns.activities.section.notification.NotificationModel;
+import com.srit.collegedesigns.activities.section.schedules.daySchedule.DayModel;
+import com.srit.collegedesigns.activities.section.schedules.ScheduleModel;
 
 import java.util.List;
 
@@ -23,5 +25,14 @@ public interface ApiServices {
 
     @GET("/public/api/getStageNotifications")
     Call<List<NotificationModel>> getStageNotifications();
+
+    @GET("/public/api/getStudentNotifications")
+    Call<List<NotificationModel>> getStudentNotifications();
+
+    @GET("/public/api/getSchedule")
+    Call<List<DayModel>> getSchedule();
+
+    @GET("/public/api/getDaySchedule")
+    Call<List<ScheduleModel>> getSchedules(@Query("id") int id);
 
 }

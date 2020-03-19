@@ -10,4 +10,19 @@
     <string name="forgot_card_no">هل نسيت رقم الهوية ؟</string>
     <string name="notifications">الاشعارات</string>
     <string name="token_expire">انتهت صلاحية تسجيلك يرجى اعادة تسجيل الدخول</string>
+    <string name="schedule">الجدول</string>
+    <string name="lessons">المحاضرات</string>
+    <string name="bg_trans">background_transition</string>
+    <string name="logo_trans">logo_transition</string>
+    <string name="app_logo">شعار التطبيق</string>
+    <string name="library">المكتبة</string>
+    <string name="title">العنوان</string>
+    <string name="adverts">الاعلانات</string>
+    <string name="week_days">ايام الاسبوع</string>
+    <string name="lessons_time">اوقات المحاظرات</string>
+    <string name="teacher_homeworks">واجبات الاستاذ</string>
+    <string name="available_books">الكتب المتوفة حالياً</string>
+    <string name="sectios">الاقسام</string>
+    <string name="homework_details">تفاصيل الواجب</string>
+    <string name="show_pic">عرض الصورة</string>
 </resources>

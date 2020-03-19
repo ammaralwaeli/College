@@ -1,13 +1,11 @@
 package com.srit.collegedesigns.helpers;
 
-import android.content.Context;
-import android.icu.text.UnicodeSetIterator;
 import android.view.ViewGroup;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.srit.collegedesigns.R;
-import com.srit.collegedesigns.login.LoginActivity;
+import com.srit.collegedesigns.activities.login.LoginActivity;
 
 public class Logout {
 

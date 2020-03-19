@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_gravity="center">
+
+    <data>
+
+        <variable
+            name="day"
+            type="String" />
+    </data>
+
+        <LinearLayout
+            android:id="@+id/item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_item"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_book"
+                android:contentDescription="@string/library" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bahij_the_sans_arabic_bold"
+                android:padding="5dp"
+                android:text="@string/title"
+                android:layout_marginBottom="15dp"
+                android:textColor="@color/colorHeader"
+                android:textSize="14sp"
+                tools:text="العنوان" />
+        </LinearLayout>
+</layout>

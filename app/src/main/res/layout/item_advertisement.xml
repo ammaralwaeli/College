@@ -5,7 +5,7 @@
     <data>
         <variable
             name="item"
-            type="com.srit.collegedesigns.home.advertisement.AdvertisemrntModel" />
+            type="com.srit.collegedesigns.activities.home.advertisement.AdvertisemrntModel" />
     </data>
 
     <LinearLayout
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_speaker"
              android:layout_marginTop="20dp"
-            />
+             android:contentDescription="@string/adverts" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -35,24 +35,22 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/arialbd"
+                android:fontFamily="@font/bahij_the_sans_arabic_plain"
                 android:text="@{item.type}"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/colorText"
-                android:textSize="25sp"
-                tools:text="الاعلانات"
-                android:layout_marginLeft="10dp" />
+                android:textSize="14sp"
+                tools:text="الاعلانات" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/arial"
+                android:fontFamily="@font/bahij_the_sans_arabic_extra_light"
                 android:text="@{item.advText}"
                 android:layout_marginStart="10dp"
                 android:textColor="@color/colorText"
-                android:textSize="18sp"
-                tools:text="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق."
-                android:layout_marginLeft="10dp" />
+                android:textSize="12sp"
+                tools:text="هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق." />
         </LinearLayout>
     </LinearLayout>
 </layout>

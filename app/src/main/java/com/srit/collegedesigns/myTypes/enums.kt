@@ -1,7 +1,10 @@
 package com.srit.collegedesigns.myTypes
 
 enum class Section{
-    NOTIFICATION
+    NOTIFICATION,
+    SCHEDULE,
+    LIBRARY,
+    HOMEWORK
 }
 
 enum class WeekDays(val dayName:String) {
