@@ -7,6 +7,7 @@
     </data>
 
     <LinearLayout
+        android:id="@+id/login_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -19,6 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="100dp"
+            android:transitionName="@string/logo_trans"
             android:src="@drawable/university"
             android:contentDescription="@string/app_logo" />
 
@@ -49,6 +51,7 @@
             android:elevation="20dp"
             android:paddingTop="10dp"
             android:gravity="center"
+            android:layoutDirection="rtl"
             android:orientation="vertical"
             android:background="@drawable/bg_linear"
             android:layout_weight="1"
@@ -76,6 +79,7 @@
                 android:hint="@string/card_no"
                 android:drawablePadding="10dp"
                 android:textSize="14sp"
+                android:textAlignment="viewStart"
                 android:inputType="textPassword"
                 android:fontFamily="@font/bahij_the_sans_arabic_light"
                 android:padding="20dp"

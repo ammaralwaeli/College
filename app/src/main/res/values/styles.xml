@@ -11,6 +11,7 @@
         <item name="toolbarStyle">@style/myToolbarStyle</item>
         <item name="actionBarStyle">@style/myToolbarStyle</item>
         <item name="android:textViewStyle">@style/myTextViewStyle</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="myToolbarStyle" parent="android:Widget.Toolbar">

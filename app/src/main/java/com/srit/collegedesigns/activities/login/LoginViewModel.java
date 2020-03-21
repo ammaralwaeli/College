@@ -9,7 +9,7 @@ import com.google.gson.JsonObject;
 public class LoginViewModel extends ViewModel {
 
 
-    private MutableLiveData<JsonObject> mutableLiveData;
+    private MutableLiveData<MyResponse> mutableLiveData;
 
     public void init(String password, String username) {
         if (mutableLiveData != null) {
@@ -19,7 +19,7 @@ public class LoginViewModel extends ViewModel {
         mutableLiveData = loginRepository.login(password, username);
     }
 
-    LiveData<JsonObject> getLoginRepository() {
+    LiveData<MyResponse> getLoginRepository() {
         return mutableLiveData;
     }
 }

@@ -11,11 +11,10 @@ class NotificationsViewModel extends ViewModel {
 
 
     private MutableLiveData<ApiResponse> mutableLiveData = new MutableLiveData<>();
-    private NotificationRepository notificationRepository;
 
 
     void init(NotificationType notificationType) {
-        notificationRepository = NotificationRepository.getInstance();
+        NotificationRepository notificationRepository = NotificationRepository.getInstance();
         if (notificationType.equals(NotificationType.SECTION)) {
             mutableLiveData = notificationRepository.getStageNotifications();
         } else {

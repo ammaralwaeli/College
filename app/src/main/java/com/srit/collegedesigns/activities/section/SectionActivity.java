@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.srit.collegedesigns.R;
+import com.srit.collegedesigns.activities.section.homework.HomeworkFragment;
 import com.srit.collegedesigns.activities.section.homework.teacher.TeacherFragment;
 import com.srit.collegedesigns.activities.section.schedules.daySchedule.ScheduleFragment;
 import com.srit.collegedesigns.activities.section.library.LibraryFragment;
@@ -57,7 +58,7 @@ public class SectionActivity extends AppCompatActivity {
                 LibraryFragment.newInstance(getSupportFragmentManager());
                 break;
             case HOMEWORK:
-                TeacherFragment.newInstance(getSupportFragmentManager());
+                HomeworkFragment.newInstance(getSupportFragmentManager());
                 break;
         }
     }
@@ -65,14 +66,11 @@ public class SectionActivity extends AppCompatActivity {
     private boolean displayPreviousFragment(String currentFragment)
     {
         Fragment fragment = null;
-//        switch (currentFragment)
-//        {
-//            case "SchedulesFragment"    :   fragment = new ScheduleFragment();     break;
-//        }
-        if ("SchedulesFragment".equals(currentFragment)) {
-            fragment = new ScheduleFragment();
+        switch (currentFragment)
+        {
+            case "ImageViewerFragment" : fragment = new HomeworkFragment();     break;
+            case "SchedulesFragment"    :   fragment = new ScheduleFragment();     break;
         }
-
         if (fragment != null) {
             FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.fragmentContainer, fragment);

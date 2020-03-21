@@ -35,10 +35,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        binding.progressIndicator.setVisibility(View.GONE);
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        binding.progressIndicator.setVisibility(View.VISIBLE);
+
         UserModel userModel = UserModel.getInstance();
         binding.profileImage.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupViewModel() {
+        binding.progressIndicator.setVisibility(View.VISIBLE);
         viewModel = new ViewModelProvider(this).get(AdvertisementViewModel.class);
         viewModel.init();
         viewModel.getAdvertisementRepository().observe(MainActivity.this, new Observer<ApiResponse>() {
@@ -64,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                             return;
                         }
                         if (apiResponse.getError() == null) {
-                            binding.progressIndicator.setVisibility(View.GONE);
+
                             advertisementAdapter = new AdvertisementAdapter(MainActivity.this, apiResponse.getPosts());
                             binding.recy.setAdapter(advertisementAdapter);
                         } else {
@@ -74,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
                             ViewExtensionsKt.showSnackBar(binding.homeLayout, s, true);
 
                         }
-
+                        binding.progressIndicator.setVisibility(View.GONE);
                     }
 
                 }

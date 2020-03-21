@@ -9,7 +9,7 @@
 
 
     <LinearLayout
-        android:id="@+id/scheduleDayFragment"
+        android:id="@+id/homework_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"

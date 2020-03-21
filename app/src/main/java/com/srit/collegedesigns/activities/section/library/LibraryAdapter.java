@@ -19,16 +19,16 @@ import java.util.List;
 
 public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHolder> {
 
-    private List<DayModel> modelList;
+    private List<LibraryModel> modelList;
     private Context context;
     private ItemListener itemListener;
 
 
     interface ItemListener{
-        void onClick(int id);
+        void onClick(String url);
     }
 
-    LibraryAdapter(Context context, List<DayModel> list) {
+    LibraryAdapter(Context context, List<LibraryModel> list) {
         this.context = context;
         this.modelList = list;
     }
@@ -41,8 +41,8 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHold
             this.binding = binding;
         }
 
-        void bind() {
-            //binding.setDay(dayModel.getDay());
+        void bind(LibraryModel model) {
+            binding.setItem(model);
             Animator animator = AnimatorInflater.loadAnimator(context, R.animator.scale);
             animator.setTarget(binding.item);
             animator.start();
@@ -63,11 +63,11 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull LibraryAdapter.ViewHolder holder, final int position) {
-        holder.bind();
+        holder.bind(modelList.get(position));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                itemListener.onClick(modelList.get(position).getId());
+                itemListener.onClick(modelList.get(position).getUrl());
             }
         });
     }
@@ -77,6 +77,6 @@ public class LibraryAdapter extends RecyclerView.Adapter<LibraryAdapter.ViewHold
     }
     @Override
     public int getItemCount() {
-        return 25;
+        return modelList.size();
     }
 }

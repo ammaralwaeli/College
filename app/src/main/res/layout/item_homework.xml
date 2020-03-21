@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:folding-cell="http://schemas.android.com/apk/res-auto">
+    xmlns:folding-cell="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
         <variable
             name="item"
-            type="String" />
+            type="com.srit.collegedesigns.activities.section.homework.HomeworkModel" />
     </data>
 
     <com.ramotion.foldingcell.FoldingCell
@@ -64,7 +65,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/test"
+                    android:srcUrl="@{item.img}"
+                    tools:src="@drawable/test"
                     android:contentDescription="@string/homework_details" />
 
                 <TextView
@@ -89,7 +91,8 @@
                     android:drawableStart="@drawable/ic_clock"
                     android:textColor="@color/colorText"
                     android:drawablePadding="25dp"
-                    android:text="2020-10-02" />
+                    android:text="@{item.addedAt}"
+                    tools:text="2020-10-02" />
 
 
 
@@ -103,7 +106,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                    android:text="@{item.homeWorkText}"
+                    tools:text="is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                     android:textDirection="rtl"
                     android:drawablePadding="25dp"
                     android:drawableStart="@drawable/ic_description"
@@ -139,7 +143,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:fontFamily="@font/bahij_the_sans_arabic_bold"
-                    android:text="المادة"
+                    android:text="@{item.homeWorkTitle}"
+                    tools:text="المادة"
                     android:textColor="@color/colorText"
                     android:textSize="20sp" />
 
@@ -148,7 +153,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="15dp"
                     android:fontFamily="@font/bahij_the_sans_arabic_extra_light"
-                    android:text="وصف الواجب"
+                    android:text="@{item.homeWorkText}"
+                    tools:text="وصف الواجب"
                     android:textColor="@color/colorText"
                     android:textSize="15sp" />
             </LinearLayout>

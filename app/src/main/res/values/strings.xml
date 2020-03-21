@@ -25,4 +25,8 @@
     <string name="sectios">الاقسام</string>
     <string name="homework_details">تفاصيل الواجب</string>
     <string name="show_pic">عرض الصورة</string>
+    <string name="not_valid_pdf">الملف غير صالح</string>
+    <string name="homeworks">الواجبات</string>
+    <string name="mustEnterPassword">يجب ادخال رمز المرور</string>
+    <string name="mustEnterUsername">يجب ادخال اسم المستخدم او رقم الهاتف</string>
 </resources>

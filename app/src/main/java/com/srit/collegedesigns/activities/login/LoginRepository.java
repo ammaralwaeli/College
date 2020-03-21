@@ -32,8 +32,8 @@ public class LoginRepository {
         apiServices= RetrofitService.cteateService(ApiServices.class);
     }
 
-    private MutableLiveData<JsonObject> data;
-    MutableLiveData<JsonObject> login(String password, String username){
+    private MutableLiveData<MyResponse> data;
+    MutableLiveData<MyResponse> login(String password, String username){
 
         data = new MutableLiveData<>();
 
@@ -42,9 +42,9 @@ public class LoginRepository {
             @Override
             public void onResponse(@NotNull Call<JsonObject> call, @NotNull Response<JsonObject> response) {
                 if(response.isSuccessful()){
-                    data.setValue(response.body());
+                    data.setValue(new MyResponse(response.body()));
                 }else {
-
+                    data.setValue(new MyResponse(response.code()+"  "+response.message()));
                     Log.e("loginError",response.code()+"  "+response.message());
                 }
             }
@@ -52,7 +52,7 @@ public class LoginRepository {
             @Override
             public void onFailure(@NotNull Call<JsonObject> call, @NotNull Throwable t) {
                 Log.e("loginError", Objects.requireNonNull(t.getMessage()));
-                data.setValue(null);
+                data.setValue(new MyResponse(Objects.requireNonNull(t.getMessage())));
             }
         });
         return data;

@@ -16,14 +16,19 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.ramotion.foldingcell.FoldingCell;
 import com.srit.collegedesigns.R;
 import com.srit.collegedesigns.databinding.ItemHomeworkBinding;
+import com.stfalcon.frescoimageviewer.ImageViewer;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.ViewHolder> {
 
-
     private OnImageClick lestiner;
     private Context context;
-    HomeworkAdapter(Context context){
+    private List<HomeworkModel> homeworkModelList;
+    HomeworkAdapter(Context context,List<HomeworkModel> list){
         this.context=context;
+        this.homeworkModelList=list;
     }
 
     @NonNull
@@ -35,6 +40,7 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.ViewHo
     }
 
     boolean isImageFitToScreen;
+    int i;
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         final FoldingCell fc = holder.binding.foldingCell;
@@ -45,20 +51,20 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.ViewHo
             }
         });
 
+        final String src=homeworkModelList.get(position).getImg();
         final ImageView imageView=holder.binding.myImage;
-
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lestiner.onImageClick(imageView);
+                lestiner.onImageClick(src);
             }
         });
 
-        holder.bind("");
+        holder.bind(homeworkModelList.get(position));
     }
 
     public interface OnImageClick{
-        void onImageClick(ImageView image);
+        void onImageClick(String image);
     }
 
     public void setLestiner(OnImageClick listiner){
@@ -67,7 +73,7 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return 20;
+        return homeworkModelList.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
@@ -78,8 +84,9 @@ public class HomeworkAdapter extends RecyclerView.Adapter<HomeworkAdapter.ViewHo
             this.binding = binding;
         }
 
-        void bind(String s) {
-            binding.setItem(s);
+        void bind(HomeworkModel model) {
+            binding.setItem(model);
+
             Animator animator= AnimatorInflater.loadAnimator(context,R.animator.scale);
             animator.setTarget(binding.foldingCell);
             animator.start();
