@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">collegeDesigns</string>
+    <string name="app_name">تطبيق الجامعات</string>
     <string name="section">الشعبة</string>
     <string name="student">الطالب</string>
     <string name="login">تسجيل دخول</string>
